@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\m@ngas\TEMAT\romy\project\c#\temp\TheMaxt.Library\TheMaxt.Serialization.Standard\TheMaxt.Serialization.Standard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\Serialisation\MaLibrairie.Serialisation\bin\Debug\System.Text.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

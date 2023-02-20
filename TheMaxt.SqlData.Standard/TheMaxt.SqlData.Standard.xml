@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.SqlData.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.SqlData.Standard.MDbConnection">
+            <summary>
+            Class with redefinable methods to connect and manipulate a database.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.MDbConnection.connection">
+            <summary>
+            Database connection property.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.#ctor(System.Data.IDbConnection)">
+            <summary>
+            Initializes a new object <see cref="T:TheMaxt.SqlData.Standard.MDbConnection"/>.
+            </summary>
+            <param name="connection">Connection object that implements the <see cref="T:System.Data.IDbConnection"/> interface</param>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.Open">
+            <summary>
+            Opens a database connection.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.Close">
+            <summary>
+            Closes a database connection.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.Execute(System.String,System.Collections.Generic.IEnumerable{System.Data.IDataParameter},System.Boolean)">
+            <summary>
+            Executes a write request on the database.
+            </summary>
+            <param name="query">The query to execute.</param>
+            <param name="parameters">List of parameters contained in the request.</param>
+            <param name="isStoredProcedure">Indicates if the query is a stored procedure.</param>
+            <returns>
+            The number of rows affected by the execution of the query.
+            </returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.Read(System.String,System.Collections.Generic.IEnumerable{System.Data.IDataParameter},System.Boolean)">
+            <summary>
+            Executes a select query on the database.
+            </summary>
+            <param name="query">The query to execute.</param>
+            <param name="parameters">List of parameters contained in the request.</param>
+            <param name="isStoredProcedure">Indicates if the query is a stored procedure.</param>
+            <returns>
+            Returns an <see cref="T:System.Data.IDataReader"/> object.
+            </returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.ToList``1(System.Data.IDataReader)">
+            <summary>
+            This method allows to convert an <see cref="T:System.Data.IDataReader"/> to <see cref="T:System.Collections.Generic.List`1"/>.
+            </summary>
+            <typeparam name="T">Type of objects to return.</typeparam>
+            <param name="reader"><see cref="T:System.Data.IDataReader"/> object. </param>
+            <returns><see cref="T:System.Collections.Generic.List`1"/>.</returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.MDbConnection.Read``1(System.String,System.Collections.Generic.IEnumerable{System.Data.IDataParameter},System.Boolean)">
+            <summary>
+            Executes a select query on the database and returns <see cref="T:System.Collections.Generic.List`1"/>.
+            </summary>
+            <param name="query">The query to execute.</param>
+            <param name="parameters">List of parameters contained in the request.</param>
+            <param name="isStoredProcedure">Indicates if the query is a stored procedure.</param>
+            <typeparam name="T">Type of objects to return.</typeparam>
+            <returns>
+            <see cref="T:System.Collections.Generic.List`1"/>.
+            </returns>
+        </member>
+        <member name="T:TheMaxt.SqlData.Standard.SqlEntity`1">
+            <summary>
+            This class allows basic manipulations on a database.
+            </summary>
+            <typeparam name="T">Class corresponding to a database table.</typeparam>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.SqlEntity`1.properties">
+            <summary>
+            Array of <see cref="T:System.Reflection.PropertyInfo"/> containing all properties of the class T.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.SqlEntity`1.theObject">
+            <summary>
+            T object.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.SqlEntity`1.dbConnection">
+            <summary>
+            <see cref="T:TheMaxt.SqlData.Standard.MDbConnection"/> object.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.SqlEntity`1.tableName">
+            <summary>
+            Name of the table.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.SqlData.Standard.SqlEntity`1.factory">
+            <summary>
+            <see cref="T:System.Data.Common.DbProviderFactory"/> object.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.#ctor(System.Data.IDbConnection)">
+            <summary>
+            Initializes a new object <see cref="T:TheMaxt.SqlData.Standard.SqlEntity`1"/>.
+            </summary>
+            <param name="connection">Connection object that implements the <see cref="T:System.Data.IDbConnection"/> interface</param>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.GetAll">
+            <summary>
+            Gets all the items from a table T.
+            </summary>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.GetDbType(System.Reflection.PropertyInfo)">
+            <summary>
+            Gets sql data type of a property.
+            </summary>
+            <param name="property"></param>
+            <returns><see cref="T:System.Data.DbType"/>.</returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.Add(`0,System.Boolean)">
+            <summary>
+            This method allows to insert the data of a T object into the T table.
+            </summary>
+            <param name="object">Object to insert.</param>
+            <param name="idIsAutoIncrement">Specifies if id is auto increment</param>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.DeleteAll">
+            <summary>
+            Removes all data from T table.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.Delete(`0)">
+            <summary>
+            Deletes a T object by id.
+            </summary>
+            <param name="object">Object to delete.</param>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.Set(`0,`0)">
+            <summary>
+            This method allows to modify the data of an existing object in the T table.
+            </summary>
+            <param name="oldObject">Object not modified</param>
+            <param name="newObject">Object modified</param>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.Get``1(``0)">
+            <summary>
+            Gets an object by id.
+            </summary>
+            <typeparam name="I">Type of id.</typeparam>
+            <param name="id">Id of object.</param>
+            <returns>A T object.</returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.GetBy``1(``0,System.Int32)">
+            <summary>
+            Gets objects from a property.
+            </summary>
+            <typeparam name="V">Type of property.</typeparam>
+            <param name="position">Position of property in the class or table. Index starts at zero</param>
+            <param name="value">value of property</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/></returns>
+        </member>
+        <member name="M:TheMaxt.SqlData.Standard.SqlEntity`1.NameOf">
+            <summary>
+            Gets name of table or class
+            </summary>
+            <returns><see cref="T:System.String"/> that represents the name of table</returns>
+        </member>
+    </members>
+</doc>

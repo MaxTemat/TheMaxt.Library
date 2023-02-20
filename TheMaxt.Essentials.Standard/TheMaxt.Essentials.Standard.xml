@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.Essentials.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.Essentials.Standard.DownloadData">
+            <summary>
+            This class allows to  download data from a url
+            </summary>
+        </member>
+        <member name="P:TheMaxt.Essentials.Standard.DownloadData.Client">
+            <summary>
+            <see cref="T:System.Net.WebClient"/> object
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.DownloadData.#ctor">
+            <summary>
+            Creates new instance of <see cref="T:TheMaxt.Essentials.Standard.DownloadData"/> and initializes <see cref="P:TheMaxt.Essentials.Standard.DownloadData.Client"/> object
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.DownloadData.DownloadFileAsync(System.String,System.String,System.String)">
+            <summary>
+            This asynchronous method allows to  download data from a url as file
+            </summary>
+            <param name="url">Download url</param>
+            <param name="destination">File storage path</param>
+            <param name="fileName">Name of file</param>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.DownloadData.DownloadByteAsync(System.String)">
+            <summary>
+            This asynchronous method allows to  download data from a url as byte array
+            </summary>
+            <param name="url">Download url</param>
+            <returns>Returns a byte array that represents the data</returns>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.DownloadData.DownloadStringAsync(System.String)">
+            <summary>
+            This asynchronous method allows to  download data from a url as string
+            </summary>
+            <param name="url">Download url</param>
+            <returns>Returns a string that represents the data</returns>
+        </member>
+        <member name="T:TheMaxt.Essentials.Standard.Zip">
+            <summary>
+            This class allows to compress and decompress files by using <see cref="T:System.IO.Compression.GZipStream"/> algorithm
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.Zip.Compress(System.String,System.String)">
+            <summary>
+            This method allows to compress a file
+            </summary>
+            <param name="filePath">The path of the file to compress</param>
+            <param name="compressedFilePath">The path of the compressed file</param>
+        </member>
+        <member name="M:TheMaxt.Essentials.Standard.Zip.Decompress(System.String,System.String)">
+            <summary>
+            This method allows to decompress a file
+            </summary>
+            <param name="decompressedFilePath">The path of the decompressed file</param>
+            <param name="compressedFilePath">The path of the compressed file</param>
+        </member>
+    </members>
+</doc>

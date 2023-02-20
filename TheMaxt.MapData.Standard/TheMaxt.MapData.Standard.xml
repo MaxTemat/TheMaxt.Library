@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.MapData.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.MapData.Standard.Database">
+            <summary>
+            Represents a database management system
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Sqlserver">
+            <summary>
+            Ms Sql server
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Access">
+            <summary>
+            Ms office Access
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Mysql">
+            <summary>
+            Mysql
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Oracle">
+            <summary>
+            Oracle
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Postgresql">
+            <summary>
+            Postgresql
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Database.Mongodb">
+            <summary>
+            Mongodb
+            </summary>
+        </member>
+        <member name="T:TheMaxt.MapData.Standard.Map">
+            <summary>
+            This class is used to map data from a database management system.
+            </summary>
+        </member>
+        <member name="P:TheMaxt.MapData.Standard.Map.keys">
+            <summary>
+            Dictionary whose key represents an database type and value represents its type c#.
+            </summary>
+        </member>
+        <member name="P:TheMaxt.MapData.Standard.Map.ConnectionStringName">
+            <summary>
+            The name of connection.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Map.tableName">
+            <summary>
+            Query to retrieve the names of all the tables in the database.
+            </summary>
+        </member>
+        <member name="F:TheMaxt.MapData.Standard.Map.propertyName">
+            <summary>
+            Query to retrieve the names of all the properties and their types from a table.
+            </summary>
+        </member>
+        <member name="P:TheMaxt.MapData.Standard.Map.Connection">
+            <summary>
+            <see cref="T:System.Data.IDbConnection"/> property.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.#ctor(System.Data.IDbConnection,TheMaxt.MapData.Standard.Database)">
+            <summary>
+            Initializes new instance of <see cref="T:TheMaxt.MapData.Standard.Map"/>. from a <see cref="T:System.Data.IDbConnection"/> object.
+            </summary>
+            <param name="connection">objet <see cref="T:System.Data.IDbConnection"/></param>
+            <param name="dbType">Database management system</param>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.Execute(System.String)">
+            <summary>
+            This method allows to execute the data mapping
+            </summary>
+            <param name="directoryPath">The path of the folder containing the project file(.csproj)</param>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.BindClasses(System.IO.DirectoryInfo)">
+            <summary>
+            Converts tables to c# classes.
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.InsertText(System.String,System.String,System.String)">
+            <summary>
+            Inserts text where a keyword is in a file.
+            </summary>
+            <param name="path">File path.</param>
+            <param name="keyword">Keyword.</param>
+            <param name="contents">Text to insert.</param>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.AddConnection(System.String,System.String)">
+            <summary>
+            Add a connection in the project configuration file.
+            </summary>
+            <param name="path">Path of folder containing configuration file(.config).</param>
+            <param name="connectionName">Connection name.</param>
+        </member>
+        <member name="M:TheMaxt.MapData.Standard.Map.GetType(System.Int32)">
+            <summary>
+            Gets c# type from a database code.
+            </summary>
+            <param name="code">Database code.</param>
+            <returns><see cref="T:System.String"/> that represents a c# type.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\m@ngas\TEMAT\romy\project\c#\temp\TheMaxt.Library\TheMaxt.MapData.Standard\TheMaxt.MapData.Standard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheMaxt.Extensions.Standard\TheMaxt.Extensions.Standard.csproj" />
+  </ItemGroup>
+
+</Project>

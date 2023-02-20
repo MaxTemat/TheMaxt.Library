@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.Extensions.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.Extensions.Standard.Extension">
+            <summary>
+            This class adds new methods to some native types.
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.StartWithLowerCase(System.String,System.Int32)">
+            <summary>
+            This method allows to know if a string starts with a lowercase letter.
+            </summary>
+            <param name="text">The string to inspect.</param>
+            <param name="index">The index where to start.</param>
+            <returns>true if string starts with a lowercase letter.</returns>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.StartWithCapital(System.String,System.Int32)">
+            <summary>
+            This method allows to know if a string starts with a capital letter.
+            </summary>
+            <param name="text">The string to inspect.</param>
+            <param name="index">The index where to start.</param>
+            <returns>true if string starts with a capital letter.</returns>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.StartWithSpecial(System.String,System.Int32)">
+            <summary>
+            This method allows to know if a string starts with a special character
+            </summary>
+            <param name="text">The string to inspect.</param>
+            <param name="index">The index where to start.</param>
+            <returns>true if string starts with a special character</returns>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.HasAccented(System.String)">
+            <summary>
+            This method allows to know if a string contains an accented character.
+            </summary>
+            <param name="text">The string to inspect.</param>
+            <returns>true if string contains an accented character.</returns>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.ToPascalCase(System.String)">
+            <summary>
+            This method allows to transform a string according to pascal case.
+            </summary>
+            <param name="text">The string to transform.</param>
+            <returns>new string according to pascal case.</returns>
+        </member>
+        <member name="M:TheMaxt.Extensions.Standard.Extension.ToCamelCase(System.String)">
+            <summary>
+            This method allows to transform a string according to camel case.
+            </summary>
+            <param name="text">The string to transform.</param>
+            <returns>new string according to camel case.</returns>
+        </member>
+    </members>
+</doc>

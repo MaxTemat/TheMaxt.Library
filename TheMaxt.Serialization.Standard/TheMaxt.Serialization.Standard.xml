@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.Serialization.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.Serialization.Standard.Binary">
+            <summary>
+            This class allows to serialize and deserialize the data according to the binary format
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Binary.Serialize(System.Object,System.String)">
+            <summary>
+            This method allows to serialize an object according to the binary format
+            </summary>
+            <param name="obj">Object to serialize</param>
+            <param name="path">The path to the backup file of the serialized object</param>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Binary.Deserialize``1(System.String)">
+            <summary>
+            This method allows to deserialize an object according to the binary format
+            </summary>
+            <typeparam name="T">The type of object to deserialize</typeparam>
+            <param name="path">The path to the backup file of the serialized object</param>
+            <returns>Returns an object of type <typeparamref name="T"/></returns>
+        </member>
+        <member name="T:TheMaxt.Serialization.Standard.Json">
+            <summary>
+            This class allows to serialize and deserialize the data according to the json format
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Json.Serialize``1(System.Object)">
+            <summary>
+            This method allows to serialize an object according to the json format
+            </summary>
+            <typeparam name="T">The type of object to serialize</typeparam>
+            <param name="obj">Object to serialize</param>
+            <returns>Returns a string that represents the json data</returns>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Json.Serialize``1(System.Object,System.String)">
+            <summary>
+            This method allows to serialize an object according to the json format
+            </summary>
+            <typeparam name="T">The type of object to serialize</typeparam>
+            <param name="path">The path to the backup file of the serialized object</param>
+            <param name="obj">Object to serialize</param>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Json.DeserializeFromString``1(System.String)">
+            <summary>
+            This method allows to deserialize an object according to the json format
+            </summary>
+            <typeparam name="T">The type of object to deserialize</typeparam>
+            <param name="json">The json string to deserialize</param>
+            <returns>Returns an object of type <typeparamref name="T"/></returns>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Json.Deserialize``1(System.String)">
+            <summary>
+            This method allows to deserialize an object according to the json format
+            </summary>
+            <typeparam name="T">The type of object to deserialize</typeparam>
+            <param name="path">The path to the backup file of the serialized object</param>
+            <returns>Returns an object of type <typeparamref name="T"/></returns>
+        </member>
+        <member name="T:TheMaxt.Serialization.Standard.Xml">
+            <summary>
+            This class allows to serialize and deserialize the data according to the xml format
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Xml.Serialize``1(System.Object)">
+            <summary>
+            This method allows to serialize an object according to the xml format
+            </summary>
+            <typeparam name="T">The type of object to serialize</typeparam>
+            <param name="obj">Object to serialize</param>
+            <returns>Returns a string that represents the xml data</returns>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Xml.Serialize``1(System.Object,System.String)">
+            <summary>
+            This method allows to serialize an object according to the xml format
+            </summary>
+            <typeparam name="T">The type of object to serialize</typeparam>
+            <param name="path">The path to the backup file of the serialized object</param>
+            <param name="obj">Object to serialize</param>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Xml.DeserializeFromString``1(System.String)">
+            <summary>
+            This method allows to deserialize an object according to the xml format
+            </summary>
+            <typeparam name="T">The type of object to deserialize</typeparam>
+            <param name="xml">The xml string to deserialize</param>
+            <returns>Returns an object of type <typeparamref name="T"/></returns>
+        </member>
+        <member name="M:TheMaxt.Serialization.Standard.Xml.Deserialize``1(System.String)">
+            <summary>
+            This method allows to deserialize an object according to the xml format
+            </summary>
+            <typeparam name="T">The type of object to deserialize</typeparam>
+            <param name="path">The path to the backup file of the serialized object</param>
+            <returns>Returns an object of type <typeparamref name="T"/></returns>
+        </member>
+    </members>
+</doc>

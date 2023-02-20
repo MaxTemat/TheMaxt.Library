@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheMaxt.Cryptography.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:TheMaxt.Cryptography.AES">
+            <summary>
+            This class allows data to be hashed using the AES algorithm
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Cryptography.AES.Encrypt(System.String,System.String,System.String)">
+            <summary>
+            This method allows to encrypt a string according to the AES algorithm
+            </summary>
+            <param name="Text">The string to hash</param>
+            <param name="Pkey">public key for AES encryption.
+            It must contain only 8 characters</param>
+            <param name="Skey">secret key for AES encryption.
+            It must contain only 8 characters</param>
+            <returns>Returns the encrypted string</returns>
+        </member>
+        <member name="M:TheMaxt.Cryptography.AES.Decrypt(System.String,System.String,System.String)">
+            <summary>
+            This method allows to decrypt a string according to the AES algorithm
+            </summary>
+            <param name="Text">The string to hash</param>
+            <param name="Pkey">public key for AES encryption.
+            It must contain only 8 characters</param>
+            <param name="Skey">secret key for AES encryption.
+            It must contain only 8 characters</param>
+            <returns>Returns the decrypted string</returns>
+        </member>
+        <member name="T:TheMaxt.Cryptography.MD5">
+            <summary>
+            This class allows data to be hashed using the MD5 algorithm
+            </summary>
+        </member>
+        <member name="M:TheMaxt.Cryptography.MD5.Hash(System.String)">
+            <summary>
+            This method allows to hash a string according to the MD5 algorithm
+            </summary>
+            <param name="Text">The string to hash</param>
+            <returns>Returns the hashed string</returns>
+        </member>
+    </members>
+</doc>

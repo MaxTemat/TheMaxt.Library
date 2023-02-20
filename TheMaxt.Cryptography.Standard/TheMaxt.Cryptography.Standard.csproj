@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\m@ngas\TEMAT\romy\project\c#\temp\TheMaxt.Library\TheMaxt.Cryptography.Standard\TheMaxt.Cryptography.Standard.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
